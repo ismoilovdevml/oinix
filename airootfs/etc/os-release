@@ -1,0 +1,10 @@
+NAME="OINIX"
+PRETTY_NAME="OINIX"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;0;0;0"
+HOME_URL="https://github.com/ismoilovdevml"
+DOCUMENTATION_URL="https://github.com/ismoilovdevml"
+SUPPORT_URL="https://github.com/ismoilovdevml"
+BUG_REPORT_URL="https://github.com/ismoilovdevml"
+LOGO=archlinux
