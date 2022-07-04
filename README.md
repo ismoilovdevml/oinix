@@ -5,5 +5,5 @@
 
 
 
-<p align="center">OINIX &copy; 2021 <a href="https://xinux.uz" target="_blank">Xinux Jamiyati</a></p>
+<p align="center">OINIX &copy; 2022 <a href="https://xinux.uz" target="_blank">Xinux Jamiyati</a></p>
 
