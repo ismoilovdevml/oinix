@@ -1,2 +1,2 @@
 # OINIX
-Arch asosida qurilayotgan OS project utida ishlanyapti
+Arch asosida qurilayotgan open source OS
