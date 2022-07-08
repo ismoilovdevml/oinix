@@ -1,8 +1,9 @@
-## Base Packages
-alsa-utils
+##  Base Packages  / Asosiy paketlar
+
+#alsa-utils
 amd-ucode
 arch-install-scripts
-archlinux-wallpaper
+archinstall
 b43-fwcutter
 base
 bind-tools
@@ -12,13 +13,16 @@ btrfs-progs
 clonezilla
 cloud-init
 crda
+cryptsetup
 darkhttpd
 ddrescue
 dhclient
+dhcpcd
 diffutils
 dmraid
 dnsmasq
 dosfstools
+e2fsprogs
 edk2-shell
 efibootmgr
 espeakup
@@ -31,21 +35,26 @@ gnu-netcat
 gpart
 gpm
 gptfdisk
-grml-zsh-config
-haveged
+#grml-zsh-config
+#grub
 hdparm
 intel-ucode
 ipw2100-fw
 ipw2200-fw
 irssi
+iw
 iwd
 jfsutils
 kitty-terminfo
+less
 lftp
+libfido2
+libusb-compat
 linux
 linux-atm
 linux-firmware
-livecd-sounds
+linux-firmware-marvell
+#livecd-sounds
 lsscsi
 lvm2
 lynx
@@ -53,15 +62,15 @@ man-db
 man-pages
 mc
 mdadm
-memtest86+
+#memtest86+
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
+modemmanager
 mtools
 nano
 nbd
 ndisc6
-neofetch
 nfs-utils
 nilfs-utils
 nmap
@@ -73,29 +82,37 @@ openvpn
 partclone
 parted
 partimage
+pcsclite
 ppp
 pptpclient
+pv
+#qemu-guest-agent
+refind
 reflector
 reiserfsprogs
 rp-pppoe
 rsync
 rxvt-unicode-terminfo
+screen
 sdparm
 sg3_utils
 smartmontools
+sof-firmware
 squashfs-tools
 sudo
 syslinux
 systemd-resolvconf
 tcpdump
 terminus-font
-termite-terminfo
 testdisk
 tmux
+tpm2-tss
 udftools
 usb_modeswitch
+usbmuxd
 usbutils
 vim
+#virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
 wireless_tools
@@ -103,39 +120,234 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
-## Wireless & LAN
-networkmanager
-network-manager-applet
-wireless_tools
+zsh
 
-## Bluetooth
-bluez
-bluez-utils
-## Touchpad and Mouse
+##  Xorg Packages  / Xorg paketlari
+xorg-server
+xorg-xbacklight
+xorg-fonts-misc
+xorg-xfd
+xorg-xkill
+xorg-xrandr
+xorg-xrdb
+xorg-xset
+xorg-xev
+xorg-xmodmap
+xorg-xwininfo
+xorg-xsetroot
+
+## Touchpad and Mouse / Sensorli panel va sichqoncha
 xorg-xinput
 xf86-input-libinput
-#xf86-input-synaptics
-#xf86-input-vmmouse
-#xf86-input-void
-#xf86-input-wacom
 
-## Graphic Drivers 
+##  GPU Drivers (Intel/AMD/VM)  / GPU drayverlari (Intel/AMD/VM)
 xf86-video-fbdev
 xf86-video-vesa
 xf86-video-intel
 xf86-video-amdgpu
 xf86-video-ati
+
+##  GPU Drivers (Nvidia)  / GPU drayverlari (Nvidia) 
 xf86-video-nouveau
 nvidia
-## Display Manager
-xorg
+nvidia-utils
+nvidia-settings
 
-## Desktop Environment
-gdm
-gnome
-gnome-tweaks
-gnome-shell-extensions
-## Oinix Applications
+##  Programs / Dasturlar 
+
+## Networking / Internet  / Tarmoq / Interne
+inetutils
 firefox
-## AUR Package Manager
-##paru
+networkmanager
+networkmanager-openvpn
+nethogs
+nm-connection-editor
+
+## Bluetooth 
+bluez
+bluez-utils
+blueman
+pulseaudio-bluetooth
+
+## Printers
+cups
+gutenprint
+
+## Sound / Ovoz
+alsa-plugins
+alsa-tools
+alsa-utils
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+pulseaudio-equalizer-ladspa
+
+## Files  / Fayllar
+ranger
+highlight
+trash-cli
+ueberzug
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+zip
+p7zip
+unzip
+unrar
+xarchiver
+xdg-user-dirs
+xdg-user-dirs-gtk
+
+## Images / Tasvirlar
+viewnior
+
+## Multimedia 
+ffmpeg
+ffmpegthumbnailer
+mpc
+mpd
+mplayer
+ncmpcpp
+tumbler
+
+## Terminals 
+alacritty
+xfce4-terminal
+
+## Docs / Editors  / Hujjatlar / muharrirlar
+atril
+geany
+geany-plugins
+vim
+
+## Fonts 
+noto-fonts
+noto-fonts-emoji
+terminus-font
+ttf-dejavu
+
+## System  / Tizim
+acpi
+autoconf
+automake
+binutils
+bison
+calc
+fakeroot
+gcc
+gparted
+gtk-engine-murrine
+gvfs
+gvfs-mtp
+gvfs-afc
+gvfs-gphoto2
+gvfs-smb
+gvfs-google
+inotify-tools
+jq
+make
+patch
+pkg-config
+polkit
+powertop
+python2
+sshfs
+udisks2
+wmctrl
+xclip
+xdotool
+xmlstarlet
+yad
+
+## Utilities  / Utilitalar
+baobab
+dialog
+dunst
+gpick
+htop
+lxappearance
+meld
+ncdu
+nitrogen
+plank
+python-pywal
+rofi
+maim
+slop
+
+## XFCE tools 
+xfce4-power-manager
+xfce4-settings
+xsettingsd
+
+## QT Style 
+kvantum
+qt5ct
+
+##  Calamares 
+boost
+calamares
+calamares-config
+
+##  Hypervisors 
+virtualbox-guest-utils
+qemu-guest-agent
+open-vm-tools
+xf86-input-vmmouse
+xf86-video-vmware
+
+##  Grub 
+os-prober
+lsb-release
+archcraft/grub
+archcraft-grub-theme
+
+## Plymouth 
+archcraft/plymouth
+archcraft-plymouth-theme
+
+##  Display Manager 
+sddm
+archcraft-sddm-theme-default
+
+## Archcraft Packages 
+archcraft-cursors
+archcraft-icons
+archcraft-themes
+archcraft-wallpapers
+archcraft-fonts
+archcraft-skeleton
+archcraft-bspwm
+archcraft-openbox
+archcraft-music
+archcraft-vim
+archcraft-omz
+archcraft-scripts
+archcraft-pixmaps
+archcraft-artworks
+archcraft-about
+archcraft-help
+archcraft-welcome
+archcraft-hooks
+archcraft-installer
+archcraft-install-scripts
+
+archcraft-mirrorlist
+chaotic-mirrorlist
+chaotic-keyring
+
+##  AUR Packages  / AUR paketlari
+betterlockscreen
+downgrade
+i3lock-color
+ksuperkey
+light
+networkmanager-dmenu-git
+obmenu-generator
+perl-linux-desktopfiles
+picom-ibhagwan-git
+polybar
+timeshift
+xfce-polkit
+yay
