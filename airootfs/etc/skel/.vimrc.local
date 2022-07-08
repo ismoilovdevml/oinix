@@ -1,7 +1,0 @@
-set autowrite
-set nocursorline
-set nowritebackup
-set whichwrap+=<,>,h,l,[,] " Wrap arrow keys between lines
-
-autocmd! bufwritepost .vimrc source ~/.vimrc
-noremap! jj <ESC>
