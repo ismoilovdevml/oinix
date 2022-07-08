@@ -1,5 +1,5 @@
 # remove from airootfs!
-# As a workaround for https://bugs.archlinux.org/task/49347 , remove pacman hooks specific to the ISO build process.
+# As a workaround for https://bugs.archlinux.org/task/49347 , remove pacman hooks specific to the ISO build process
 # If not, they would be used when pacstrap is run in the live environment.
 
 [Trigger]
