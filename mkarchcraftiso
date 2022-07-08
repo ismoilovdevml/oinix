@@ -820,7 +820,7 @@ _export_netboot_artifacts() {
 _sign_netboot_artifacts() {
     local _file _dir
     local _files_to_sign=()
-    _msg_info "Signing netboot artifacts..."
+    _msg_info "Signing netboot oinix..."
     _dir="${isofs_dir}/${install_dir}/boot/"
     for _file in "${ucodes[@]}"; do
         if [[ -e "${_dir}${_file}" ]]; then
