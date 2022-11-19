@@ -139,3 +139,8 @@ gnome-shell-extensions
 firefox
 ## AUR Package Manager
 paru
+# oinix packages
+flat-remix
+flat-remix-gtk
+flat-remix-gnome
+nerd-fonts-jetbrains-mono
