@@ -1,0 +1,10 @@
+#
+#
+# kernel list for i686
+#
+# Enter the kernel package and header package name in the kernel package list.
+#
+#[kernel name]               [kernel filename]               [mkinitcpio profile]
+#
+
+core                         vmlinuz-linux                   linux
