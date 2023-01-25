@@ -1,0 +1,9 @@
+#
+#
+# look and feel
+
+# icon
+papirus-icon-theme
+
+# theme
+materia-gtk-theme
