@@ -2,7 +2,7 @@
 ARGS         :=
 BUILD_SCRIPT := build.sh
 KERNEL       := zen
-SHARE_OPTION := --boot-splash --comp-type "xz" --user "xinux" --password "xinux" --kernel "${KERNEL}" --noconfirm
+SHARE_OPTION := --boot-splash --comp-type "xz" --user "oinix" --password "oinix" --kernel "${KERNEL}" --noconfirm
 ARCH_x86_64  := --arch x86_64
 ARCH_i686    := --arch i686
 ARCH_Pen4    := --arch pen4
@@ -89,6 +89,6 @@ check:
 
 ARCH         := x86_64
 CHANNEL      := xfce
-LOCALE       := ja
+LOCALE       := en
 custom:
 	sudo ${CURRENT_DIR}/${BUILD_SCRIPT} ${ARGS} ${SHARE_OPTION} --arch ${ARCH} -l ${LOCALE} ${CHANNEL}

@@ -4,9 +4,9 @@
 iso_name="oinix"
 iso_label="OINIX_$(date +%Y%m)"
 iso_publisher="Ismoilovdev <https://github.com/ismoilovdevml>"
-iso_application="Minimal Arch based Distiro community Xinux  Uzbekistan "
+iso_application="Minimal Arch based Distro by Xinux Community Uzbekistan"
 iso_version="$(date +%Y.%m.%d)"
-install_dir="arch"
+install_dir="oinix"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')
 arch="x86_64"

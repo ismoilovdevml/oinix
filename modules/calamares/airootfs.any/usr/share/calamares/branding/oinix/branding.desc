@@ -67,17 +67,17 @@ windowPlacement: center
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         OINIX
+    productName:         OINIX Linux
     shortProductName:    OINIX
-    version:
-    shortVersion:
-    versionedName:       Oinix
-    shortVersionedName:  OINIX
-    bootloaderEntryName: OINIX
-    productUrl:          https://github.com/ismoilovdevml/oinix
+    version:             2025.01
+    shortVersion:        2025.01
+    versionedName:       OINIX Linux 2025.01
+    shortVersionedName:  OINIX 2025.01
+    bootloaderEntryName: OINIX Linux
+    productUrl:          https://xinux.uz
     supportUrl:          https://github.com/ismoilovdevml/oinix/discussions
     knownIssuesUrl:      https://github.com/ismoilovdevml/oinix/issues
-    releaseNotesUrl:     https://github.com/ismoilovdevml/oinix
+    releaseNotesUrl:     https://github.com/ismoilovdevml/oinix/releases
 
 # These images are loaded from the branding module directory.
 #

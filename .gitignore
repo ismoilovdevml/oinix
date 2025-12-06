@@ -1,0 +1,25 @@
+# Build outputs
+work/
+out/
+*.iso
+*.tar.gz
+*.tar.xz
+
+# Build artifacts
+.build_option
+.config
+menuconfig/build/
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
