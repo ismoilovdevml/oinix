@@ -1,0 +1,27 @@
+/* OINIX branding for Calamares.
+ *
+ * The sidebar is dark; the page area keeps Calamares' light palette, so any
+ * colour set here must be picked for the surface it actually lands on.
+ */
+
+/* --- Sidebar (dark) --- */
+#sidebarApp,
+#sidebarMenuApp {
+    background-color: #1b2027;
+}
+
+#sidebarApp QLabel,
+#sidebarMenuApp QLabel {
+    color: #ffffff;
+}
+
+/* --- Page content (light) --- */
+#mainText {
+    color: #1b2027;
+    font-weight: 600;
+}
+
+/* Keep the slideshow backdrop consistent with the sidebar. */
+#slideshow {
+    background-color: #1b2027;
+}

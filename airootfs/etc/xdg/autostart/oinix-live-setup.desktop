@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=OINIX live session setup
+Comment=Marks the desktop installer launcher as trusted
+Exec=/usr/local/bin/oinix-live-setup
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+OnlyShowIn=XFCE;

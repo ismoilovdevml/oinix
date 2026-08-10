@@ -1,0 +1,37 @@
+# OINIX Linux branding for Calamares
+---
+componentName:  oinix
+
+welcomeStyleCalamares:   false
+welcomeExpandingLogo:    true
+
+windowExpanding:    normal
+windowSize:         900px,600px
+windowPlacement:    center
+
+strings:
+    productName:         OINIX Linux
+    shortProductName:    OINIX
+    version:             2025.01
+    shortVersion:        2025.01
+    versionedName:       OINIX Linux 2025.01
+    shortVersionedName:  OINIX 2025.01
+    bootloaderEntryName: OINIX
+    productUrl:          https://xinux.uz
+    supportUrl:          https://github.com/ismoilovdevml/oinix/discussions
+    knownIssuesUrl:      https://github.com/ismoilovdevml/oinix/issues
+    releaseNotesUrl:     https://github.com/ismoilovdevml/oinix/releases
+
+images:
+    productIcon:         "logo-64.png"
+    productLogo:         "logo-128.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+slideshowAPI:            2
+
+style:
+   sidebarBackground:    "#1b2027"
+   sidebarText:          "#ffffff"
+   sidebarTextSelect:    "#1793d1"
+   sidebarTextHighlight: "#2a323c"

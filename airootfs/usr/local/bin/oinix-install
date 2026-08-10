@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Launch the OINIX installer (Calamares) with the privileges it needs.
+#
+
+set -euo pipefail
+
+if [[ ! -x /usr/bin/calamares ]]; then
+    printf 'The OINIX installer is not available on this system.\n' >&2
+    exit 1
+fi
+
+if (( EUID == 0 )); then
+    exec /usr/bin/calamares "$@"
+fi
+
+for escalate in pkexec /usr/bin/pkexec; do
+    if command -v "${escalate}" >/dev/null 2>&1; then
+        exec "${escalate}" /usr/bin/calamares "$@"
+    fi
+done
+
+exec sudo -E /usr/bin/calamares "$@"

@@ -1,5 +1,0 @@
-root:x:0:root
-adm:x:4:kael
-wheel:x:10:kael
-uucp:x:14:kael
-kael:x:1000:

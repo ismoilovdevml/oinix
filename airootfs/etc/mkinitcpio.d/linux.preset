@@ -1,8 +1,12 @@
-# mkinitcpio preset file for the 'linux' package on archiso
+# mkinitcpio preset file for the 'linux' package on the OINIX live medium.
+#
+# archiso_config must point at the archiso hook set; without it mkinitcpio
+# falls back to /etc/mkinitcpio.conf and builds an initramfs that has no
+# `archiso` hook, which cannot find the squashfs root at boot.
 
 PRESETS=('archiso')
 
 ALL_kver='/boot/vmlinuz-linux'
-ALL_config='/etc/mkinitcpio.conf'
 
+archiso_config='/etc/mkinitcpio.conf.d/archiso.conf'
 archiso_image="/boot/initramfs-linux.img"

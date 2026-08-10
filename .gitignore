@@ -23,3 +23,6 @@ menuconfig/build/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local package repository (built by build/build-calamares.sh)
+localrepo/

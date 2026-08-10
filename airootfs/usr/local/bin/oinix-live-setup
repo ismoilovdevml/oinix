@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Per-session setup for the OINIX live desktop.
+#
+# xfdesktop refuses to run a .desktop file it did not create until the file is
+# executable *and* carries a matching `metadata::xfce-exe-checksum`; without
+# the checksum the user gets an "Untrusted application launcher" prompt instead
+# of the installer. The metadata lives in the per-user gvfs store, so it can
+# only be written once the session (and its gvfs daemon) is up.
+#
+
+set -euo pipefail
+
+launcher="${HOME}/Desktop/oinix-install.desktop"
+
+[[ -f "${launcher}" ]] || exit 0
+command -v gio >/dev/null 2>&1 || exit 0
+
+chmod +x "${launcher}"
+gio set -t string "${launcher}" \
+    metadata::xfce-exe-checksum "$(sha256sum "${launcher}" | cut -d' ' -f1)" || true

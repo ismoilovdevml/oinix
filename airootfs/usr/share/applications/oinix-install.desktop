@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install OINIX Linux
+Name[uz]=OINIX Linux o'rnatish
+Name[ru]=Установить OINIX Linux
+GenericName=System Installer
+Comment=Install OINIX Linux onto this computer
+Comment[uz]=OINIX Linux'ni ushbu kompyuterga o'rnatish
+Comment[ru]=Установить OINIX Linux на этот компьютер
+TryExec=calamares
+# Matches the org.freedesktop.policykit.exec.path annotation of the
+# io.calamares.calamares.pkexec.run action, which is what lets pkexec keep the
+# X11 environment (allow_gui=true).
+Exec=sh -c "pkexec calamares"
+Icon=calamares
+Terminal=false
+# pkexec re-execs the program, so the launching desktop never sees the startup
+# notification complete and would otherwise report a bogus timeout.
+StartupNotify=false
+Categories=Qt;System;
+Keywords=installer;calamares;oinix;
+X-AppStream-Ignore=true

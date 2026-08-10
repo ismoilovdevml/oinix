@@ -1,0 +1,8 @@
+/* OINIX live medium: members of the wheel group may run the installer and
+ * manage storage without being prompted for a password. This file only ships
+ * on the live medium and is removed by the installer's final step. */
+polkit.addRule(function(action, subject) {
+    if (subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
