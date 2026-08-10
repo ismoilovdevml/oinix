@@ -1,0 +1,28 @@
+# Packages OINIX needs that Arch does not ship. build/build-aur.sh builds each
+# entry in order and publishes the results to localrepo/, which pacman.conf
+# exposes as [oinix-local].
+#
+# Each line is an AUR *package base* (not a split package name), optionally
+# followed by KEY=VALUE environment overrides passed to makepkg.
+#
+# Order matters: an entry may depend on one listed above it.
+
+# Installer
+ckbcomp
+calamares
+
+# macOS-style desktop.
+#
+# WhiteSur's install.sh needs two things a container does not provide, and its
+# `set -e` turns both into a bare "A failure occurred in package()":
+#   TERM       - the progress spinner shells out to tput
+#   SUDO_USER  - the user is resolved via logname, then passed to getent
+whitesur-gtk-theme         TERM=xterm SUDO_USER=builder
+whitesur-icon-theme        TERM=xterm SUDO_USER=builder
+whitesur-cursor-theme-git  TERM=xterm SUDO_USER=builder
+
+# Global menu. This one base builds the registrar, the GLib translator and the
+# Xfce panel plugin; appmenu-gtk-module (the other half) comes from [extra].
+# The MATE, Budgie and Vala Panel variants are skipped so their panels are not
+# dragged in as build dependencies.
+vala-panel-appmenu  _build_mate=false _build_budgie=false _build_vala=false

@@ -18,10 +18,19 @@ installer.
 | | |
 |---|---|
 | Base | Arch Linux, rolling |
-| Desktop | Xfce 4 · LightDM · PipeWire · NetworkManager |
+| Desktop | Xfce 4, styled after macOS: top menu bar, global menu, Plank dock |
+| Theme | WhiteSur (GTK, icons, cursors) · Inter · JetBrains Mono |
 | Installer | Calamares 3.4, `oinix` branding |
 | Boot | `bios.syslinux` + `uefi.systemd-boot` |
 | Live user | `oinix` / `oinix` (autologin); `root` has no password |
+
+### The desktop
+
+A 28px panel across the top stands in for the macOS menu bar: the OINIX logo
+opens a system menu (About, Settings, Sleep, Restart, Shut Down), and next to
+it `vala-panel-appmenu` renders the focused application's own menubar. Window
+controls sit on the left. Plank provides the dock. `Super` takes the place of
+`Command`, so `Super+Space` opens the application finder as Spotlight does.
 
 ## Build
 
@@ -79,15 +88,35 @@ screenshots below were produced.
 
 ## Notes
 
-**Calamares is built, not vendored.** Arch does not ship Calamares, so
-`build/build-calamares.sh` builds it from the AUR into `localrepo/`, which
-`pacman.conf` exposes as `[oinix-local]`. OINIX supplies only the branding
-component and the module configuration.
+**Packages Arch does not ship are built, not vendored.** Calamares and the
+WhiteSur themes come from the AUR: `build/build-aur.sh` builds everything in
+`build/aur-packages.txt` into `localrepo/`, which `pacman.conf` exposes as
+`[oinix-local]`. OINIX supplies only the branding and the configuration.
+
+**No Apple assets are redistributed.** Apple licenses the SF font family for
+designing software for Apple platforms, and its wallpapers are copyrighted, so
+neither can ship inside an image that is handed to other people. The interface
+font is [Inter](https://rsms.me/inter/), the closest open equivalent, and the
+wallpapers in `airootfs/usr/share/backgrounds/oinix/` are generated for OINIX.
 
 **The installer is removed on install.** `modules/packages.conf` drops
 Calamares and the other live-only packages from the target system, and
 `shellprocess-final.conf` clears the live medium's autologin, password-less
 polkit rule and archiso scaffolding before the first boot.
+
+## Credits
+
+The desktop stands on other people's work:
+
+- [WhiteSur GTK theme, icons and cursors](https://github.com/vinceliuice) — vinceliuice
+- [vala-panel-appmenu](https://gitlab.com/vala-panel-project/vala-panel-appmenu) — the global menu
+- [Plank](https://launchpad.net/plank) — the dock
+- [Calamares](https://calamares.io/) — the installer
+- [archiso](https://gitlab.archlinux.org/archlinux/archiso) — the image builder
+- [Inter](https://rsms.me/inter/) — the interface font
+
+The panel layout, the OINIX system menu and the Plank theme are adapted from
+[ismoilovdevml/de-config](https://github.com/ismoilovdevml/de-config) (MIT).
 
 ## License
 

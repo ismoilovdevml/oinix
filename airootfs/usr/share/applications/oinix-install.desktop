@@ -18,6 +18,6 @@ Terminal=false
 # pkexec re-execs the program, so the launching desktop never sees the startup
 # notification complete and would otherwise report a bogus timeout.
 StartupNotify=false
-Categories=Qt;System;
+Categories=Qt;System;OINIXApple;
 Keywords=installer;calamares;oinix;
 X-AppStream-Ignore=true

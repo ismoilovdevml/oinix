@@ -199,13 +199,15 @@ lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 
+#-- Dock --#
+plank
+
 #-- Xfce desktop --#
 xfce4
 xfce4-notifyd
 xfce4-pulseaudio-plugin
 xfce4-screenshooter
 xfce4-taskmanager
-xfce4-whiskermenu-plugin
 xfce4-clipman-plugin
 xfce4-battery-plugin
 thunar
@@ -229,11 +231,23 @@ gparted
 gnome-disk-utility
 fastfetch
 
-#-- Theming / fonts --#
-papirus-icon-theme
-gnome-themes-extra
+#-- Global menu --#
+# appmenu-gtk-module exports an application's menubar over D-Bus;
+# vala-panel-appmenu-xfce (local repo) renders it in the top panel.
+appmenu-gtk-module
+
+#-- Theming --#
+# The WhiteSur themes come from the local repository; these are the fallbacks
+# and the libraries the themes need.
 librsvg
+papirus-icon-theme
 adwaita-icon-theme
+
+#-- Fonts --#
+# Apple's SF Pro cannot be redistributed, so Inter -- the closest open
+# equivalent -- is the interface font.
+inter-font
+ttf-jetbrains-mono
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -248,6 +262,12 @@ qt6-declarative
 yaml-cpp
 libpwquality
 
-#-- OINIX local repository (built by build/build-calamares.sh) --#
+#-- OINIX local repository (built by build/build-aur.sh) --#
 calamares
 ckbcomp
+whitesur-gtk-theme
+whitesur-icon-theme
+whitesur-cursor-theme-git
+appmenu-glib-translator
+vala-panel-appmenu-registrar
+vala-panel-appmenu-xfce

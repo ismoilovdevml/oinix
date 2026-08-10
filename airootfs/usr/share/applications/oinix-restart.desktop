@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Restart...
+Name[uz]=Qayta ishga tushirish…
+Name[ru]=Перезагрузить…
+Exec=xfce4-session-logout --reboot
+Icon=system-reboot
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

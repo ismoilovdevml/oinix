@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Lock Screen
+Name[uz]=Ekranni qulflash
+Name[ru]=Заблокировать экран
+Exec=xflock4
+Icon=system-lock-screen
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

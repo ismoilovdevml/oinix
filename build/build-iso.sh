@@ -29,16 +29,19 @@ for entry in profiledef.sh pacman.conf packages.x86_64 airootfs efiboot syslinux
 done
 
 if [[ "${WITH_INSTALLER}" != '1' ]]; then
+    # Only the installer is dropped. [oinix-local] stays, because the desktop
+    # theming packages live there too.
     msg 'Building without the Calamares installer'
-    sed -i '/^calamares$/d' "${PROFILE}/packages.x86_64"
-    sed -i '/^\[oinix-local\]/,+2d' "${PROFILE}/pacman.conf"
+    sed -i '/^calamares$/d;/^ckbcomp$/d' "${PROFILE}/packages.x86_64"
     rm -rf "${PROFILE}/airootfs/etc/calamares" \
            "${PROFILE}/airootfs/usr/share/calamares" \
            "${PROFILE}/airootfs/usr/share/applications/oinix-install.desktop" \
            "${PROFILE}/airootfs/usr/local/bin/oinix-install"
-elif [[ ! -e "${SRC}/localrepo/oinix-local.db.tar.gz" ]]; then
+fi
+
+if [[ ! -e "${SRC}/localrepo/oinix-local.db.tar.gz" ]]; then
     echo "error: ${SRC}/localrepo/oinix-local.db.tar.gz is missing." >&2
-    echo "       Run build/build-calamares.sh first, or set OINIX_WITH_INSTALLER=0." >&2
+    echo "       Run build/build-aur.sh first." >&2
     exit 1
 fi
 

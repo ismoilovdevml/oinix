@@ -1,0 +1,35 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<!--
+  The OINIX menu, the equivalent of the Apple menu: system information,
+  settings and the session actions, reachable from the leftmost item of the
+  top panel. Its entries carry the OINIXApple category and are NoDisplay, so
+  they never appear in the ordinary application menu.
+-->
+<Menu>
+    <Name>Xfce</Name>
+
+    <DefaultAppDirs/>
+    <DefaultDirectoryDirs/>
+
+    <Include>
+        <Category>OINIXApple</Category>
+    </Include>
+
+    <Layout>
+        <Filename>oinix-about.desktop</Filename>
+        <Separator/>
+        <Filename>oinix-settings.desktop</Filename>
+        <Filename>oinix-install.desktop</Filename>
+        <Separator/>
+        <Filename>oinix-force-quit.desktop</Filename>
+        <Separator/>
+        <Filename>oinix-sleep.desktop</Filename>
+        <Filename>oinix-restart.desktop</Filename>
+        <Filename>oinix-shutdown.desktop</Filename>
+        <Separator/>
+        <Filename>oinix-lock.desktop</Filename>
+        <Filename>oinix-logout.desktop</Filename>
+    </Layout>
+</Menu>

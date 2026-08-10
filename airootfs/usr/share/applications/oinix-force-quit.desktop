@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Force Quit
+Name[uz]=Majburiy yopish
+Name[ru]=Завершить принудительно
+Exec=xkill
+Icon=application-exit
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

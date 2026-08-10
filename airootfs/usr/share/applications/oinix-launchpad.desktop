@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Launchpad
+Name[uz]=Dasturlar
+Name[ru]=Программы
+Comment=Browse every installed application
+Exec=xfce4-appfinder
+Icon=/usr/share/pixmaps/oinix/launchpad.svg
+Terminal=false
+StartupNotify=true
+Categories=Utility;
+Keywords=launchpad;applications;apps;

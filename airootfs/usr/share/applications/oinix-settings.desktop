@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=System Settings
+Name[uz]=Tizim sozlamalari
+Name[ru]=Настройки системы
+Exec=xfce4-settings-manager
+Icon=preferences-system
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

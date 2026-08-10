@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Sleep
+Name[uz]=Uyqu
+Name[ru]=Режим сна
+Exec=xfce4-session-logout --suspend
+Icon=system-suspend
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

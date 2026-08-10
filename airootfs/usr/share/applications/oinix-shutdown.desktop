@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Shut Down...
+Name[uz]=O'chirish…
+Name[ru]=Выключить…
+Exec=xfce4-session-logout --halt
+Icon=system-shutdown
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

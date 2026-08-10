@@ -9,7 +9,7 @@
 # Usage:
 #   ./build.sh                 build the ISO (installer included)
 #   ./build.sh --no-installer  build the ISO without Calamares
-#   ./build.sh --installer     (re)build the Calamares package only
+#   ./build.sh --packages      (re)build the AUR packages only
 #   ./build.sh --shell         open a shell in the build container
 #   ./build.sh --clean         remove work/, out/ and localrepo/
 #
@@ -37,7 +37,7 @@ with_installer='1'
 while (( $# )); do
     case "$1" in
         --no-installer) with_installer='0' ;;
-        --installer)    action='calamares' ;;
+        --packages|--installer) action='packages' ;;
         --shell)        action='shell' ;;
         --clean)        action='clean' ;;
         --fast)         comp='zstd' ;;
@@ -73,19 +73,19 @@ docker_run=(
 )
 
 case "${action}" in
-    calamares)
-        msg 'Building the Calamares package'
+    packages)
+        msg 'Building the AUR packages'
         "${docker_run[@]}" -u builder "${IMAGE}" \
-            bash /oinix/build/build-calamares.sh /oinix/localrepo
+            bash /oinix/build/build-aur.sh /oinix/localrepo
         ;;
     shell)
         "${docker_run[@]}" -it "${IMAGE}" bash
         ;;
     iso)
         if [[ "${with_installer}" == '1' && ! -e "${ROOT}/localrepo/oinix-local.db.tar.gz" ]]; then
-            msg 'Calamares package not found; building it first'
+            msg 'Local repository not built yet; building the AUR packages first'
             "${docker_run[@]}" -u builder "${IMAGE}" \
-                bash /oinix/build/build-calamares.sh /oinix/localrepo
+                bash /oinix/build/build-aur.sh /oinix/localrepo
         fi
         msg "Building the ISO (squashfs compression: ${comp})"
         "${docker_run[@]}" "${IMAGE}" bash /oinix/build/build-iso.sh

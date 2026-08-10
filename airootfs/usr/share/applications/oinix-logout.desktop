@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Log Out...
+Name[uz]=Chiqish…
+Name[ru]=Выйти…
+Exec=xfce4-session-logout --logout
+Icon=system-log-out
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;

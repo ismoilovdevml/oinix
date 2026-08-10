@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=About This Computer
+Name[uz]=Ushbu kompyuter haqida
+Name[ru]=Об этом компьютере
+Exec=xfce4-about
+Icon=oinix-logo
+Terminal=false
+StartupNotify=false
+OnlyShowIn=XFCE;
+Categories=OINIXApple;
