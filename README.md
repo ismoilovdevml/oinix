@@ -26,11 +26,13 @@ installer.
 
 ### The desktop
 
-A 28px panel across the top stands in for the macOS menu bar: the OINIX logo
-opens a system menu (About, Settings, Sleep, Restart, Shut Down), and next to
-it `vala-panel-appmenu` renders the focused application's own menubar. Window
-controls sit on the left. Plank provides the dock. `Super` takes the place of
-`Command`, so `Super+Space` opens the application finder as Spotlight does.
+A 28px bar across the top stands in for the macOS menu bar: the OINIX glyph
+opens a system menu, and beside it `vala-panel-appmenu` renders the focused
+application's own menubar. Window controls sit on the left, Plank provides the
+dock, and `Super` takes the place of `Command` — `Super+Space` opens the
+application finder the way Spotlight does.
+
+<p align="center"><img src="assets/screenshots/system-menu.png" width="90%" alt="The OINIX system menu open in the top bar"></p>
 
 ## Build
 
